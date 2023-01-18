@@ -1,7 +1,7 @@
 # ChantJS
 A super simple way to preload audio files for use in web games.
 
-Loading textures and audio always seems like a PITA when it comes to web games. So I created this simple JS script to take care of that.
+Loading textures and audio always seems like a PITA when it comes to web games. So I created this simple JS script to take care of loading the audio files part.
 As you can see it follows the KISS ethos of programming. Hope you find it useful.
 -Chroma
 

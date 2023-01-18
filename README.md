@@ -21,6 +21,8 @@ async function preloadAudio() {
 
 async init() {
   await preloadAudio();
+  sounds.spinner.volume = 0.7;
+  sounds.spinner.play();
   // do something else (load textures?)
   // do another something else (load sprites?)
   // startGame();

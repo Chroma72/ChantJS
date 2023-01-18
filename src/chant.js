@@ -9,21 +9,26 @@
 export default class Chant {
   static bundles = {};
 
+  constructor() {
+  if (this instanceof Chant) {
+    throw Error('Chant is a static class cannot be instantiated.');
+  }
+
   static addBundle(bundle, sources) {
     this.bundles[bundle] = sources;
   }
 
   static async loadBundle(bundleKey) {
-    const sounds = {};
+    const audios = {};
     const bundle = this.bundles[bundleKey];
     for (const key in bundle) {
-      sounds[key] = await this.loadAsync(bundle[key]);
+      audios[key] = await this._loadAsync(bundle[key]);
     }
     delete this.bundles[bundleKey];
-    return sounds;
+    return audios;
   }
 
-  static async loadAsync(src) {
+  static async _loadAsync(src) {
     return new Promise((resolve, reject) => {
       const audio = new Audio();
       audio.oncanplaythrough = () => { resolve(audio); }

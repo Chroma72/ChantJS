@@ -10,8 +10,8 @@ export default class Chant {
   static bundles = {};
 
   constructor() {
-  if (this instanceof Chant) {
-    throw Error('Chant is a static class and cannot be instantiated.');
+    if (this instanceof Chant) {
+      throw Error('Chant is a static class and cannot be instantiated.');
     }
   }
 

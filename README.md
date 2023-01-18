@@ -26,5 +26,5 @@ async init() {
   // startGame();
 }
 
-window.onload(preloadAudio());
+window.onload(init());
 ```

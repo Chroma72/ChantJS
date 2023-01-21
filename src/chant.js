@@ -31,10 +31,9 @@ export default class Chant {
 
   static async _loadAsync(src) {
     return new Promise((resolve, reject) => {
-      const audio = new Audio();
+      const audio = new Audio(src);
       resolve(audio);
       audio.onerror = () => { reject(`Invalid audio source: ${src}`); };
-      audio.src = src;
     })
   }
 }

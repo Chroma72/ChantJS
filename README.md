@@ -6,7 +6,7 @@ As you can see, it follows the KISS ethos of programming. Hope you find it usefu
 -Chroma
 
 ```
-import Chant from '/js/chant.mjs';
+import Chant from '/js/chant.js';
 
 async function preloadAudio() {
   Chant.addBundle('sounds', {
